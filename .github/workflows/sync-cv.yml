@@ -22,4 +22,5 @@ jobs:
           rename: PINGZHI_TANG_CV.pdf
           user_email: stanleytang@stu.pku.edu.cn
           user_name: Stanleytowne
+          destination_branch: master
           commit_message: "Update CV from pingzhi-tang-cv"
