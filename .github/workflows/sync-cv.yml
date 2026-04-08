@@ -1,0 +1,25 @@
+name: Sync CV to homepage
+
+on:
+  push:
+    branches: [main]
+    paths: [cv.pdf]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Push CV to homepage repo
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.HOMEPAGE_TOKEN }}
+        with:
+          source_file: cv.pdf
+          destination_repo: Stanleytowne/stanley-home
+          destination_folder: public
+          rename: PINGZHI_TANG_CV.pdf
+          user_email: stanleytang@stu.pku.edu.cn
+          user_name: Stanleytowne
+          commit_message: "Update CV from pingzhi-tang-cv"
