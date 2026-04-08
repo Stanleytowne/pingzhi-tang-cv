@@ -17,7 +17,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.HOMEPAGE_TOKEN }}
         with:
           source_file: cv.pdf
-          destination_repo: Stanleytowne/stanley-home
+          destination_repo: Stanleytowne/Stanleytowne.github.io
           destination_folder: public
           rename: PINGZHI_TANG_CV.pdf
           user_email: stanleytang@stu.pku.edu.cn
