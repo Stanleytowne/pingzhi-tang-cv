@@ -1,0 +1,206 @@
+%% cv.tex  –  Pingzhi Tang's CV
+\documentclass[11pt,a4paper]{article}
+
+% ── Packages ──────────────────────────────────────────────
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage{bm}
+\usepackage{fontawesome5}
+
+% ── Colours ───────────────────────────────────────────────
+\definecolor{headerblue}{RGB}{31,73,105}
+\definecolor{linkblue}{RGB}{38,103,138}
+
+% ── Page style / footer ──────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\itshape Pingzhi Tang~--~Page \thepage\ of 2}
+
+% ── Section font ────────────────────────────────────────
+\newfontfamily\sectionfont{Gill Sans}
+\renewcommand{\section}[1]{%
+  \vspace{0.9em}%
+  \noindent{\large\bfseries\sectionfont\color{headerblue}#1}%
+  \vspace{-0.5em}%
+  \par\noindent{\color{headerblue}\rule{\textwidth}{0.8pt}}%
+  \vspace{0.3em}%
+  \par
+}
+
+% ── List settings ────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, parsep=2pt, topsep=2pt}
+
+% ── Helper: bold-italic name ─────────────────────────────
+\newcommand{\myname}{\textbf{\textit{Pingzhi Tang}}}
+
+% ══════════════════════════════════════════════════════════
+\begin{document}
+
+% ── Right-aligned "Last updated" ─────────────────────────
+\begin{flushright}
+  \vspace{-1em}
+  \itshape Last updated: \today
+\end{flushright}
+
+\vspace{-0.5em}
+
+% ── Name ─────────────────────────────────────────────────
+\begin{center}
+  {\Huge\bfseries\sectionfont\color{headerblue} Pingzhi Tang}\\[0.6em]
+  \href{mailto:stanleytang@stu.pku.edu.cn}{\faEnvelope\ stanleytang@stu.pku.edu.cn}
+  \quad \faPhone\ +86 182 5827 6580
+  \quad \href{https://pingzhitang.cv}{\faGlobe\ pingzhitang.cv}\\[0.2em]
+  \href{https://github.com/Stanleytowne}{\faGithub\ Stanleytowne}
+  \quad \href{https://scholar.google.cz/citations?user=UYRV6y0AAAAJ}{\faGraduationCap\ Google Scholar}
+\end{center}
+
+% ── EDUCATION ────────────────────────────────────────────
+\section{Education}
+
+\noindent
+\textbf{Peking University}, B.S.\ in Artificial Intelligence \hfill Sept 2023 -- present\\
+General Artificial Intelligence Experimental Program (Tong Class)
+\begin{itemize}
+  \item \textit{GPA: 3.87/4.00; Major GPA: 3.92/4.00; \textbf{Rank 1/39}}
+  \item Related courses: Linear Algebra, Probability and Statistics, Discrete Mathematics, Introduction to Computer Systems, Computer Networks, Machine Learning, Large Language Models and Alignment
+\end{itemize}
+
+% ── RESEARCH INTERESTS ───────────────────────────────────
+\section{Research Interests}
+
+\noindent
+My research centers on optimizing the computational efficiency of Foundation Models with the ultimate goal of achieving accessible and scalable intelligence. I leverage system-level insights to innovate in model architecture and inference, viewing efficiency not merely as cost reduction, but as the key enabler for scaling reasoning and alignment.
+\begin{itemize}
+  \item \textbf{Inference Optimization:} KV Cache Compression, Speculative Decoding, Quantization, Model Pruning.
+  \item \textbf{Next-Gen Architectures:} (Linear) Attention, Diffusion LLMs, SSMs.
+  \item \textbf{Efficient and Fast Adaptation}: PEFT, efficient RL.
+  \item \textbf{Reasoning \& RL:} Developing data-efficient RL algorithms and exploring scalable reasoning paradigms.
+  \item \textbf{Continual Adaptation and Long-term Memory}: Enabling models to continuously learn and retain knowledge over extended contexts and tasks.
+\end{itemize}
+
+% ── PUBLICATIONS ─────────────────────────────────────────
+\section{Publications}
+
+\noindent
+{[1]} \textbf{CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning}\\
+Fanxu Meng, \myname, Fan Jiang, Muhan Zhang\\
+\href{https://arxiv.org/abs/2411.17426}{arxiv.org/abs/2411.17426}\quad (\textbf{ICML 2025})
+
+\medskip\noindent
+{[2]} \textbf{TransMLA: Multi-Head Latent Attention Is All You Need}\\
+Fanxu Meng*, \myname*, Zengwei Yao, Xing Sun, Muhan Zhang (*equal contribution)\\
+\href{https://arxiv.org/abs/2502.07864}{arxiv.org/abs/2502.07864}\quad (\textbf{NeurIPS 2025, spotlight})
+
+\medskip\noindent
+{[3]} \textbf{HD-PiSSA: High-Rank Distributed Orthogonal Adaptation}\\
+Yiding Wang, Fanxu Meng, Xuefeng Zhang, Fan Jiang, \myname, Muhan Zhang\\
+\href{https://arxiv.org/abs/2505.18777}{arxiv.org/abs/2505.18777}\quad (\textbf{EMNLP 2025, oral})
+
+\medskip\noindent
+{[4]} \textbf{TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill Decode Inference}\\
+Xiaojuan Tang*, Fanxu Meng*, \myname, Yuxuan Wang, Di Yin, Xing Sun, Muhan Zhang\\
+\href{https://arxiv.org/abs/2508.15881}{arxiv.org/abs/2508.15881}\quad (\textbf{ASPLOS 2026})
+
+\medskip\noindent
+{[5]} \textbf{Orchestrating Dual-Boundaries: An Arithmetic Intensity Inspired Acceleration Framework for Diffusion Language Models}\\
+Linye Wei, Wenjue Chen, \myname, Xiaotian Guo, Le Ye, Runsheng Wang, Meng Li\\
+\href{https://arxiv.org/abs/2511.21759}{arxiv.org/abs/2511.21759}\quad (\textbf{DAC 2026})
+
+\medskip\noindent
+{[6]} \textbf{Knowledge is Not Enough: Injecting RL Skills for Continual Adaptation}\\
+\myname*, Yiding Wang*, Muhan Zhang (*equal contribution)\\
+\href{https://arxiv.org/abs/2601.11258}{arxiv.org/abs/2601.11258}\quad (\textbf{ACL 2026})
+
+\medskip\noindent
+{[7]} \textbf{Breaking the Blocks: Continuous Low-Rank Decomposed Scaling for Unified LLM Quantization and Adaptation}\\
+\myname*, Ruijie Zhou*, Fanxu Meng, Wenjie Pei, Muhan Zhang (*equal contribution)\\
+\href{https://arxiv.org/abs/2601.22716}{arxiv.org/abs/2601.22716}\quad (\textbf{Preprint})
+
+\medskip\noindent
+{[8]} \textbf{TEAM: Temporal-Spatial Consistency Guided Expert Activation for MoE Diffusion Language Model Acceleration}\\
+Linye Wei, Zixiang Luo, \myname, Meng Li\\
+\href{https://arxiv.org/abs/2602.08404}{arxiv.org/abs/2602.08404}\quad (\textbf{Preprint})
+
+% ── RESEARCH EXPERIENCE ─────────────────────────────────
+\section{Research Experience}
+
+\noindent
+\textbf{M$\bm{\mu}$ Lab}, Peking University \hfill July 2024 -- present\\
+\textit{Supervisor: Prof.\ Muhan Zhang}
+\begin{itemize}
+  \item Developed a novel large model pruning and fine-tuning method using cross-layer singular value decomposition. Published at \textbf{ICML 2025} [\textbf{paper 1}].
+  \item Created a practical method to transform standard multi-head attention into multi-head latent attention, achieving up to 11x inference acceleration with almost no loss. Published at \textbf{NeurIPS 2025 (Spotlight)} [\textbf{paper 2}].
+  \item Invented High-rank Distributed PiSSA, a distributed PEFT method for LLMs that increases update flexibility by assigning different weight components to each GPU. Published at \textbf{EMNLP 2025} [\textbf{paper 3}].
+  \item Proposed Parametric Skill Transfer (PaST), a modular framework that extracts domain-agnostic RL skill vectors and injects them into SFT-adapted models for efficient continual adaptation. Published at \textbf{ACL 2026} [\textbf{paper 6}].
+  \item Proposed Low-Rank Decomposed Scaling (LoRDS), a unified framework for LLM quantization and adaptation that represents element-wise scaling as continuous low-rank matrices, enabling high-rank weight updates without additional inference cost [\textbf{paper 7}].
+\end{itemize}
+
+\medskip\noindent
+\textbf{PKU-SEC-Lab}, Peking University \hfill Sept 2025 -- Feb 2026\\
+\textit{Supervisor: Prof.\ Meng Li}
+\begin{itemize}
+  \item Developed an arithmetic intensity inspired acceleration framework for Diffusion Language Models, orchestrating compute- and memory-bound operations for efficient inference. Published at \textbf{DAC 2026} [\textbf{paper 5}].
+  \item Proposed TEAM, a temporal-spatial consistency guided expert activation method for accelerating MoE Diffusion Language Models [\textbf{paper 8}].
+\end{itemize}
+
+% ── WORK EXPERIENCE ──────────────────────────────────────
+\section{Work Experience}
+
+\noindent
+\textbf{Tencent}, Research Intern \hfill June 2025 -- Sept 2025
+\begin{itemize}
+  \item Co-invented a novel attention mechanism that addresses the KV cache overhead issue in MLA tensor parallelism. By utilizing tensor-parallel separation on top of MLA, this approach achieves a two-fold acceleration during inference. Published at \textbf{ASPLOS 2026} [\textbf{paper 4}].
+  \item Attempted to integrate our TransMLA method [\textbf{paper 2}] into the training process of industry models.
+\end{itemize}
+
+% ── SKILLS ───────────────────────────────────────────────
+\section{Skills}
+
+\noindent
+\textbf{Programming:} Proficient with Python, C++, Git and LaTeX
+
+\medskip\noindent
+\textbf{Mathematics:} Good understanding of calculus, linear algebra and probability
+
+\medskip\noindent
+\textbf{Languages:} English (fluent), Mandarin (native), French (beginner)
+
+% ── ACADEMIC SERVICE ─────────────────────────────────────
+\section{Academic Service}
+
+\noindent
+\textbf{Reviewer:} ICML 2026
+
+% ── ACHIEVEMENTS ─────────────────────────────────────────
+\section{Achievements}
+
+\noindent
+\textbf{Taotian Scholarship, only 4 recipients annually} \hfill 2025\\
+Institute for Artificial Intelligence, Peking University
+
+\medskip\noindent
+\textbf{Dean's Scholarship, top 2\%} \hfill 2025\\
+Institute for Artificial Intelligence, Peking University
+
+\medskip\noindent
+\textbf{Soong Ching Ling ``Future Scholarship'', top 5\%} \hfill 2024\\
+Institute for Artificial Intelligence, Peking University
+
+\medskip\noindent
+\textbf{Second-Class Scholarship, top 5\%} \hfill 2023 \& 2024\\
+Peking University
+
+\medskip\noindent
+\textbf{``Outstanding Student'' Honor, top 10\%} \hfill 2023 \& 2024\\
+Peking University
+
+\end{document}
